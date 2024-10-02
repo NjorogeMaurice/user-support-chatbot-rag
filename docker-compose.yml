@@ -1,0 +1,11 @@
+services:
+  user-support-chatbot-api:
+    build: .
+    container_name: user-support-chatbot-api
+    ports:
+      - "5582:8000"
+    restart: always
+    environment:
+      - ENV=production  # Environment variables for production
+    volumes:
+      - .:/app  # Optional, to keep the app code accessible inside the container
